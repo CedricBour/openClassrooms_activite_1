@@ -27,27 +27,26 @@ console.log("--------------------------------------------");
 
 while(currentPlayerAttempt < maxAttemptsNumber && playerWin == false) {
 
-		playerNumber = prompt("Entrez un nombre");
-		currentPlayerAttempt++;
-		if(playerNumber > solution ) {
-			console.log(playerNumber + " est trop grand. Essayez encore"); 
-		} 
-		else if(playerNumber < solution ) {
-			console.log(playerNumber + " est trop petit. Essayez encore"); 
-		} 
-		else if(playerNumber == solution ) {
-			console.log(""); 
-			console.log("La solution est bien " + solution); 
-			console.log("Félicitation, vous avez REUSSI !!!"); 
-			console.log("Rechargez la page pour rejouer avec nous!");
-			var playerWin = true;
-		}
-		else {
-			console.log("Il y a eu une erreur, rechargez la page svp..."); 
-		}
+	playerNumber = prompt("Entrez un nombre");
+	currentPlayerAttempt++;
+	if(playerNumber > solution ) {
+		console.log(playerNumber + " est trop grand. Essayez encore"); 
+	} 
+	else if(playerNumber < solution ) {
+		console.log(playerNumber + " est trop petit. Essayez encore"); 
+	} 
+	else if(playerNumber == solution ) {
+		console.log(""); 
+		console.log("La solution est bien " + solution); 
+		console.log("Félicitation, vous avez REUSSI !!!"); 
+		console.log("Rechargez la page pour rejouer avec nous!");
+		var playerWin = true;
+	}
+	else {
+		console.log("Il y a eu une erreur, rechargez la page svp..."); 
+	}
 }
 
-	
 if (currentPlayerAttempt == maxAttemptsNumber && playerWin == false) {
 	console.log("Vous n'avez plus d'essais...");
 	console.log("Le résultat était " + solution);
